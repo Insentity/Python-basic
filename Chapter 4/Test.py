@@ -1,3 +1,3 @@
-import f2c_qa
+import f2c_file_read
 
-print(f2c_qa.Fahr2Cel())
+print(f2c_file_read.Fahr2Cel())
