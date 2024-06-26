@@ -1,3 +1,3 @@
-import f2c_file_read
+import f2c_file_read_write
 
-print(f2c_file_read.Fahr2Cel())
+f2c_file_read_write.Fahr2Cel()
