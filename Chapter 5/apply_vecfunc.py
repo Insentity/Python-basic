@@ -12,7 +12,7 @@ print(y)
 
 
 # Array method
-v = (2,3,-1)
-def f_array(input): return np.array([x**3+x*math.exp(x)+1 for x in input])    # Convert to array
-print(f_array(v))
+v = np.array([2,3,-1])
+# def f_array(input): return np.array([x**3+x*math.exp(x)+1 for x in input])    # Convert to array
+print(f_list(v))
 
