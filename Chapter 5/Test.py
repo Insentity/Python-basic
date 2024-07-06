@@ -1,6 +1,16 @@
 import numpy as np
 
-def f(x): return np.exp(x)
 
-x2 = np.array([2,3,1])
-print(f(x2))
+r = np.zeros(100000000)
+x = np.random.randint(0, 20, size =100000000)
+@profile
+def axpy1(r,x):
+    r = r + x
+    return r
+axpy1(r,x)
+
+@profile
+def axpy2(r,x):
+    r += x
+    return r
+axpy2(r,x)
