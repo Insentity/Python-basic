@@ -7,7 +7,9 @@ Output:
 
 # Main function
 def Fahr2Cel():
-    x = eval(get_input())
+    x = get_input()
+    if x == "test": x=32
+    else: x = eval(x)
     return (x-32)*5/9
 
 # Get input function
@@ -25,7 +27,7 @@ def test_Fahr2Cel():
     x = 32
     result_expected = 0
     eps = 1E-5  # Tolerance
-    result = Fahr2Cel(x)
+    result = Fahr2Cel()
     success = abs(result - result_expected) < eps
     assert success, "Found result = %g not %g" %(result, result_expected)
     print("%g Fahrenheit is %g Celsius degree" %(x, result))
@@ -38,3 +40,8 @@ if __name__ == '__main__':
     else:
         result = Fahr2Cel()
         print(result)
+
+
+# Example command line: 
+# python "C:\\CongLuan\\Courses\\Python basics\\Exercises\\Python-basic\\Chapter 4\\f2c_cml.py" test
+# python "C:\\CongLuan\\Courses\\Python basics\\Exercises\\Python-basic\\Chapter 4\\f2c_cml.py" 36
