@@ -1,2 +1,4 @@
-for i in range(0):
-    print(i)
+a = [5,10]
+b = a
+b[0] = 2
+print(a)
