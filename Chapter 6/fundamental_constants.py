@@ -7,8 +7,13 @@ with open(abs_path, "r") as infile:
     lines = lines[2:]
     dict = {}
     for lines in lines:
-        print(lines.split()[:-2])
-        dict[lines.split()[:-2]] = 1
-    # print(lines)
+        keywords = '' 
+        for x in lines.split()[:-2]:
+            keywords += ('%s ' %x)      # Keywords are the constant names. Meaning items before the second last 2
+            keywords.rstrip()   # Strip the blank space at the end
+
+        # dict[temp] = lines.split()[-2]
+        dict[keywords] = lines.split()[-2]  # The values of the constants are the second last items obtained from .split()
+    print(dict)
 
 
