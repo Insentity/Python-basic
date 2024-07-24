@@ -1,4 +1,2 @@
-keywords = ("test1", "test2")
-values = (1,2)
-dict = { keywords: values}
+dict = {'abc': 2, 'bcd': 5}
 print(dict)
