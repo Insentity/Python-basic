@@ -1,17 +1,7 @@
-class Diff(object):
-    def __init__(self, f, h=1E-5):
-        self.f = f
-        self.h = float(h)
+from Sine12 import *
 
+a = Sine1()
+b = Sine2()
 
-class Forward1(Diff):
-    def __call__(self, x):
-        f, h = self.f, self.h
-        return (f(x+h) - f(x))/h
-    
-
-from math import sin, pi
-a = Forward1(Forward1(sin))
-print(Forward1(sin))
-print(a)
-print(a(5))
+print("%g %g %g" %(a(5), a.df(5), a.ddf(5)))
+print("%g %g %g" %(b(5), b.df(5), b.ddf(5)))
